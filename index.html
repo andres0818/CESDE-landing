@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduLend</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="index.css">
+
+  <script src="index.js"></script>
+</head>
+
+<body class="bg-cover bg-fixed bg-center bg-no-repeat overflow-x-hidden font-sans relative"
+  style="background-image: url('imagenes/biblioteca.jpeg')">
+
+  <section
+    class="contenedor-menu flex justify-center flex-wrap items-center gap-5 p-5 bg-white sticky top-0 z-[1000] shadow-[0_5px_7px_-1px_#00000033]">
+    <a href="index.html"
+      class="text-[1.8em] font-bold text-[rgb(28,80,71)] hover:text-[#3a49ac] transition-colors">EduLend</a>
+    <label for="menu"
+      class="w-[30px] absolute right-[50px] top-[30px] cursor-pointer blockh [@media(min-width:1000px)]:hidden">
+      <img src="imagenes/menu.jpg" class="" alt="">
+    </label>
+    <input type="checkbox" name="menu" id="menu" class="menu hidden">
+    <div class="flex items-center justify-center gap-5 opciones-menu hidden md:flex">
+      <div
+        class="bg-[#4db3b3] w-[235px] h-[37px] flex items-center justify-center rounded border border-gray-400 hover:text-black">
+        <a href="https://www.instagram.com/?flo=true" class="text-white font-bold">Inscribirse</a>
+      </div>
+      <div
+        class="bg-[#4db3b3] w-[235px] h-[37px] flex items-center justify-center rounded border border-gray-400 hover:text-black">
+        <a href="https://www.instagram.com/?flo=true" class="text-white font-bold">Iniciar sesión</a>
+      </div>
+      <div
+        class="bg-[#4db3b3] w-[235px] h-[37px] flex items-center justify-center rounded border border-gray-400 hover:text-black">
+        <a href="https://www.instagram.com/?flo=true" class="text-white font-bold">Elementos disponibles</a>
+      </div>
+    </div>
+    <div id="progress-container" class="fixed top-[80px] left-0 w-full h-[5px] bg-[#eee] z-[9999]">
+      <div id="progress-bar" class="h-full w-0 bg-[#4db3b3] transition-[width] duration-200 ease-out"></div>
+    </div>
+  </section>
+
+  <div class="relative min-h-screen showcase">
+    <div class="text-center py-20 px-5 text-white relative z-10">
+      <h2
+        class="text-[clamp(1.4rem,4vw,2.2rem)] font-semibold text-white mb-16 shadow-black drop-shadow-[3px_4px_black]">
+        ¡Un espacio para aprender, crecer y compartir conocimiento!</h2>
+      <div class="flex justify-center flex-wrap gap-5 mb-4">
+        <div
+          class="bg-white w-[180px] text-center p-5 rounded-[10px] shadow transition-transform duration-300 hover:-translate-y-1 hover:bg-[#e1f7f9] cursor-pointer">
+          <div class="text-[30px] text-[rgb(28,80,71)] mb-1">💻 📚</div>
+          <p class="font-bold text-[rgb(28,80,71)]">Solicitar préstamo</p>
+        </div>
+        <div
+          class="bg-white w-[180px] text-center p-5 rounded-[10px] shadow transition-transform duration-300 hover:-translate-y-1 hover:bg-[#e1f7f9] cursor-pointer">
+          <div class="text-[30px] text-[rgb(28,80,71)] mb-1">📋</div>
+          <p class="font-bold text-[rgb(28,80,71)]">Consultar disponibilidad</p>
+        </div>
+        <div
+          class="bg-white w-[180px] text-center p-5 rounded-[10px] shadow transition-transform duration-300 hover:-translate-y-1 hover:bg-[#e1f7f9] cursor-pointer">
+          <div class="text-[30px] text-[rgb(28,80,71)] mb-1">📅</div>
+          <p class="font-bold text-[rgb(28,80,71)]">Fecha de entrega</p>
+        </div>
+        <div
+          class="bg-white w-[180px] text-center p-5 rounded-[10px] shadow transition-transform duration-300 hover:-translate-y-1 hover:bg-[#e1f7f9] cursor-pointer">
+          <div class="text-[30px] text-[rgb(28,80,71)] mb-1">📜</div>
+          <p class="font-bold text-[rgb(28,80,71)]">Historial de usuario</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-wrap justify-center items-center gap-[150px] p-10 mostrar-parrafo flex-col-reverse sm:flex-row">
+      <div class="max-w-[500px] bg-white/80 p-5 rounded min-w-[250px] bg-[#333]">
+        <p><span class="text-[1.2em] font-bold text-[rgb(28,80,71)] block mb-2 ">¿Qué es EduLend?</span>EduLend es un
+          sistema para gestionar préstamos y llevar un control de computadores y libros educativos, asegurando un uso
+          eficiente en el entorno académico.</p>
+      </div>
+      <div class="w-[20dvw] overflow-hidden min-w-[300px]">
+        <img class="w-full object-contain object-bottom "
+          src="https://png.pngtree.com/png-clipart/20220111/original/pngtree-2-5d-education-system-flat-college-png-png-image_7088590.png"
+          alt="">
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center items-center gap-[150px] p-10 elemento-testimonio">
+      <div class="w-[20dvw] overflow-hidden min-w-[300px]">
+        <img class="w-full object-contain object-bottom" src="https://www.companygame.com/images/objetivos.png" alt="">
+      </div>
+      <div class="max-w-[500px] bg-white/80 p-5 rounded min-w-[250px]">
+        <p><span class="text-[1.2em] font-bold text-[rgb(28,80,71)] block mb-2">Objetivo:</span>Desarrollar e
+          implementar en la Universidad CESDE un sistema integral para la gestión de préstamos de computadores y
+          material bibliográfico, con el fin de optimizar el acceso, uso y control de los recursos académicos.</p>
+      </div>
+    </div>
+
+    <div class="elemento-beneficios px-5 py-10 bg-[#ececec] h-[60vh] min-h-min">
+      <div
+        class="text-center text-2xl font-bold text-[#333] relative pt-16 after:block after:w-[60px] after:h-[4px] after:bg-[#4db3b3] after:mt-3 after:mx-auto">
+        Beneficios</div>
+      <div class="flex flex-wrap justify-center gap-[30px] py-10 max-w-[1200px] mx-auto">
+        <div class="bg-white/80 p-6 max-w-[450px] flex-1 shadow-md text-center rounded min-w-[300px]">
+          <h4 class="text-black text-[1em] mb-2 font-semibold">Acceso Rápido y Eficiente a Recursos Académicos</h4>
+          <p class="text-[#333] text-[1em] leading-relaxed">EduLend permite a estudiantes y personal académico acceder
+            de manera ágil y sencilla a computadores y libros educativos. Con este sistema, se optimiza el tiempo de uso
+            y se evita el desorden administrativo, garantizando que todos los usuarios tengan lo que necesitan de manera
+            eficiente.</p>
+        </div>
+        <div class="bg-white/80 p-6 max-w-[450px] flex-1 shadow-md text-center rounded min-w-[300px]">
+          <h4 class="text-black text-[1em] mb-2 font-semibold">Mejora en la Gestión y Control de préstamos</h4>
+          <p class="text-[#333] text-[1em] leading-relaxed">La plataforma facilita el seguimiento de préstamos y
+            devoluciones de materiales educativos, asegurando un control completo sobre los recursos. Esto reduce las
+            pérdidas y mejora la disponibilidad de materiales, lo que beneficia tanto a los estudiantes como a la
+            institución.</p>
+        </div>
+        <div class="bg-white/80 p-6 max-w-[450px] flex-1 shadow-md text-center rounded min-w-[300px]">
+          <h4 class="text-black text-[1em] mb-2 font-semibold">Fomento de la Responsabilidad y el Aprendizaje
+            Colaborativo</h4>
+          <p class="text-[#333] text-[1em] leading-relaxed">EduLend fomenta un ambiente de aprendizaje responsable y
+            colaborativo. Al permitir un acceso organizado a recursos educativos, se promueve el uso compartido de
+            materiales y la cooperación entre estudiantes, enriqueciendo la experiencia educativa.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="elemento-testimonio px-5 py-10 min-h-min">
+      <div
+        class="text-center text-2xl font-bold text-white relative pt-16 after:block after:w-[60px] after:h-[4px] after:bg-[#4db3b3] after:mt-3 after:mx-auto mb-10">
+        Testimonios</div>
+      <div class="flex flex-wrap justify-center gap-[30px] py-10 max-w-[1200px] mx-auto">
+        <div class="bg-white/80 p-6 max-w-[350px] flex-1 shadow-md text-center rounded min-w-[300px] pt-10 relative">
+          <img src="imagenes/user.png"
+            class="w-[60px] rounded-[1000px] absolute top-[-35px] shadow-[0_5px_7px_-1px_#00000033] left-1/2 -translate-x-1/2"
+            alt="">
+          <h4 class="text-black text-[1em] mb-2 font-semibold">María González - Estudiante</h4>
+          <p class="text-[#333] text-[1em] leading-relaxed">""EduLend ha sido una herramienta clave en mi vida
+            universitaria. Acceder a libros y equipos nunca había sido tan fácil. Me encanta su rapidez y organización."
+          </p>
+        </div>
+        <div class="bg-white/80 p-6 max-w-[350px] flex-1 shadow-md text-center rounded min-w-[300px] pt-10 relative">
+          <img src="imagenes/user.png"
+            class="w-[60px] rounded-[1000px] absolute top-[-35px] shadow-[0_5px_7px_-1px_#00000033] left-1/2 -translate-x-1/2"
+            alt="">
+          <h4 class="text-black text-[1em] mb-2 font-semibold">Luis Molina - Coordinador Académico</h4>
+          <p class="text-[#333] text-[1em] leading-relaxed">"Gracias a EduLend hemos logrado optimizar la entrega y
+            control de los recursos institucionales. Es una solución muy efectiva y fácil de implementar."</p>
+        </div>
+        <div class="bg-white/80 p-6 max-w-[350px] flex-1 shadow-md text-center rounded min-w-[300px] pt-10 relative">
+          <img src="imagenes/user.png"
+            class="w-[60px] rounded-[1000px] absolute top-[-35px] shadow-[0_5px_7px_-1px_#00000033] left-1/2 -translate-x-1/2"
+            alt="">
+          <h4 class="text-black text-[1em] mb-2 font-semibold">Dulce Mejía - Docente</h4>
+          <p class="text-[#333] text-[1em] leading-relaxed">"Lo que más valoro de EduLend es su sencillez. Mis
+            estudiantes pueden acceder a lo que necesitan sin complicaciones, y eso mejora su experiencia académica."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#ececec] py-16 px-6 flex flex-wrap justify-center items-center gap-12 min-h-min">
+      <iframe class="w-[600px] h-[421px]" src="https://www.google.com/maps/embed?..." style="border:0;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <div class="formulario-registrar mostrar-parrafo text-center bg-white/85 min-w-[400px] p-8 rounded-xl shadow-lg">
+        <h3 class="text-[1.6em] text-[rgb(28,80,71)] mb-5">Inscríbete</h3>
+        <form action="" class="space-y-4">
+          <div class="text-left">
+            <label for="nombre" class="font-bold text-[#333]">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required
+              class="w-[90%] mt-1 p-3 rounded border border-gray-300 bg-[#f9f9f9] focus:outline-none focus:border-[#4db3b3]">
+          </div>
+          <div class="text-left">
+            <label for="email" class="font-bold text-[#333]">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Correo" required
+              class="w-[90%] mt-1 p-3 rounded border border-gray-300 bg-[#f9f9f9] focus:outline-none focus:border-[#4db3b3]">
+          </div>
+          <div class="text-left">
+            <label for="programa" class="font-bold text-[#333]">Programa académico:</label>
+            <input type="text" id="programa" name="programa" placeholder="Tu programa" required
+              class="w-[90%] mt-1 p-3 rounded border border-gray-300 bg-[#f9f9f9] focus:outline-none focus:border-[#4db3b3]">
+          </div>
+          <div class="mt-6">
+            <button type="submit"
+              class="bg-[#4db3b3] text-white font-bold px-6 py-3 rounded hover:bg-[#3a9ea4] transition-colors">Registrarse</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="bg-[rgb(28,80,71)] text-white text-center py-16 px-5 relative">
+      <h2 class="text-2xl mb-4 font-bold">¿Listo para optimizar el acceso a tus recursos académicos?</h2>
+      <p class="mb-6">Únete a EduLend y descubre una forma más eficiente de estudiar, colaborar y avanzar.</p>
+      <a href="#formulario"
+        class="bg-[#4db3b3] text-white px-6 py-3 font-bold rounded hover:bg-[#a4dbe2] hover:text-black transition-colors inline-block">¡Visítanos
+        ahora!</a>
+    </div>
+  </div>
+</body>
+
+</html>

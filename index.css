@@ -1,0 +1,119 @@
+body::before {
+content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+@keyframes aparecer-left {
+  from {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes aparecer-right {
+  from {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heading {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes content {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.elemento-beneficios {
+  view-timeline-name: --animacion;
+  view-timeline-axis: block;
+  animation-timeline: --animacion;
+  animation-name: aparecer-left;
+  animation-range: entry 0% cover 50%;
+  animation-fill-mode: both;
+}
+
+.elemento-testimonio {
+  view-timeline-name: --animacion;
+  view-timeline-axis: block;
+  animation-timeline: --animacion;
+  animation-name: aparecer-right;
+  animation-range: entry 0% cover 50%;
+  animation-fill-mode: both;
+}
+
+.showcase {
+  animation: heading 3s forwards;
+  position: relative;
+}
+
+.mostrar-parrafo {
+  animation: content 3s forwards;
+  position: relative;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #4db3b3;
+  transition: width 0.2s ease-out;
+}
+
+@media (max-width: 1000px){
+
+  .opciones-menu, .contenedor-menu {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor-menu{
+    padding: 18px 0 0;
+  }
+
+  .opciones-menu{
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  }
+
+  .opciones-menu div:first-child {
+    margin-top: 2rem;
+  }
+
+  .opciones-menu div:last-child {
+    margin-bottom: 2rem;
+  }
+
+  .contenedor-menu:has(.menu:checked) .opciones-menu{
+    height: 200px;
+    visibility: visible;
+  }
+
+}
